@@ -69,14 +69,24 @@
 						<p>Фильтр</p>
 						<form class="form-filter">
 							<fieldset>
-								<p class="filter-title">Цена</p>
+								<p class="filter-title">Цена:</p>
+								<div class="range-controls">
+									<div class="scale"></div>
+									<div class="toggle toggle-min"></div>
+									<div class="toggle toggle-max"></div>
+								</div>
+								<div class="price-controls">
+									<input type="text" name="min" id="min" value="0">
+									<span>&mdash;</span>
+									<input type="text" name="max" id="max" value="30000">
+								</div>
 							</fieldset>
-							<fieldset>
-								<p class="filter-title">Производители</p>
+							<fieldset class="producer">
+								<p class="filter-title">Производители:</p>
 								<input type="checkbox" name="bosh" id="bosh" checked>
 								<label for="bosh">bosh</label>
 								<input type="checkbox" name="interskol" id="interskol">
-								<label for="interskol">interskol</label>
+								<label for="interskol">интерскол</label>
 								<input type="checkbox" name="makita" id="makita" checked>
 								<label for="makita">makita</label>
 								<input type="checkbox" name="dewalt" id="dewalt">
@@ -84,16 +94,20 @@
 								<input type="checkbox" name="hitachi" id="hitachi">
 								<label for="hitachi">hitachi</label>
 							</fieldset>
-							<fieldset>
-								<p class="filter-title">Питание</p>
-								<input type="radio" name="power" id="akkum">
+							<fieldset class="supply">
+								<p class="filter-title">Питание:</p>
+								<input type="radio" name="power" id="akkum" checked>
 								<label for="akkum">аккумуляторные</label>
 								<input type="radio" name="power" id="set">
 								<label for="set">сетевые</label>
 							</fieldset>
+							<input type="submit" class="show-btn" value="показать">
 						</form>
 					</div>
 					<div class="sorting">
+						<div class="sorting-type">
+							<p>Сортировка</p>
+						</div>
 					</div>
 				</section>
 			</div>

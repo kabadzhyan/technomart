@@ -1221,6 +1221,8 @@ body {
 	padding: 30px;
 	padding-left: 27px;
     margin-top: 16px;
+	margin-bottom: 19px;
+	
 }
 
 .tools {
@@ -1230,16 +1232,187 @@ body {
 	color: #000;
 }
 
+.tools fieldset {
+	border: none;
+}
+
 .tools .filter {
 	width: 220px;
+	
+}
+
+.filter > p {
 	background-color: #f7f3ec;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	padding: 10px 18px;
+	border-radius: 3px;
+	margin: 0;
+	text-transform: uppercase;
 }
 
 .tools .sorting {
 	width: 700px;
 	background-color: #f7f3ec;
-
 }
+
+.tools fieldset {
+	margin: 0;
+	padding: 0;
+	width: 220px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.tools fieldset:last-of-type {
+	border: none;
+}
+
+.form-filter .filter-title {
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 17px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 12px;
+	margin-bottom: 14px;
+}
+
+.tools .range-controls {
+	position: relative;
+	box-sizing: border-box;
+	background-color: #f7f3ec;
+	padding: 39px 20px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	margin-bottom: 8px;
+}
+
+.range-controls .scale {
+	width: 180px;
+	min-height: 2px;
+	content: "";
+	background-image: linear-gradient(to right, #00ca74 140px, #d7dcde 140px, #d7dcde 100%);
+}
+
+.range-controls .toggle {
+	width: 4px;
+	height: 4px;
+	background-color: #ababab;
+	border: 8px solid white;
+	border-radius: 50%;
+	position: absolute;
+	top: 30px;
+	cursor: pointer;
+	box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+	left: 18px;
+}
+
+.range-controls .toggle-max {
+	left: 158px;
+}
+
+.tools .price-controls {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.price-controls span {
+	color: black;
+	margin-left: 9px;
+	margin-right: 10px;
+}
+
+.price-controls input {
+	display: block;
+	background-color: #f7f3ec;
+	text-align: center;
+	width: 95px;
+	height: 38px;
+	vertical-align: middle;
+	border: none;
+	border-radius: 3px;
+	outline: none;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 17px;
+	line-height: 18px;
+}
+
+.tools .producer {
+	padding-bottom: 0;
+}
+
+.producer input[type="checkbox"],
+.supply input[type="radio"] {
+	display: none;
+}
+
+.producer label,
+.supply label {
+	display: block;
+	text-transform: uppercase;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+	position: relative;
+	padding-left: 34px;
+    margin-bottom: 21px;
+}
+
+.producer label:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/check-off.png) no-repeat;
+	width: 27px;
+	height: 23px;
+}
+
+.producer input[type="checkbox"]:checked + label:before {
+	background: url(../img/check-on.png) no-repeat;
+}
+
+.supply .filter-title {
+	margin-top: 16px;
+}
+
+.supply label:before {
+	content: "";
+	position: absolute;
+	top: -3px;
+    left: -1px;
+	background: url(../img/radio-off.png) no-repeat;
+	width: 25px;
+	height: 25px;
+}
+
+.supply input[type="radio"]:checked + label:before {
+	background: url(../img/radio-on.png) no-repeat;
+}
+
+.form-filter .show-btn {
+	background-color: white;
+	outline: none;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 30px;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size:13px;
+	line-height: 18px;
+	padding: 10px 38px 8px;
+	cursor: pointer;
+}
+
+
 
 
 /*ФУТЕР*/
