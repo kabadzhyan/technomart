@@ -330,7 +330,12 @@ body {
     position: relative;
 }
 
-.logged .logged-user:before {
+.logged .logged-user:active {
+	color: rgba(0,0,0,0.3);
+}
+
+.logged .logged-user:before,
+.logged .logged-user:active:before {
 	content: "";
     display: inline-block;
     vertical-align: middle;
@@ -342,7 +347,12 @@ body {
     left: 13px;
 }
 
-.logged .log-out:before {
+.logged .logged-user:hover:before {
+	background: #fff url(../img/user-hover.png) no-repeat 50% 50%;
+}
+
+.logged .log-out:before,
+.logged .log-out:active:before {
 	content: "";
 	display: inline-block;
 	vertical-align: middle;
@@ -350,6 +360,10 @@ body {
 	height: 45px;
 	background: #fff url(../img/logout.png) no-repeat 50% 50%;
 	padding-right: 20px;
+}
+
+.logged .log-out:hover:before {
+	background: #fff url(../img/logout-hover.png) no-repeat 50% 50%;
 }
 
 .logged-row-2 {
@@ -367,6 +381,15 @@ body {
 .logged-row-2 .my-orders {
 	position: relative;
 	margin-right: 33px;
+}
+
+.logged-row-2 a:hover {
+	color: #ee3643;
+}
+
+.logged-row-2 a:active {
+	color: #32425c;
+	opacity: 0.3;
 }
 
 .logged-row-2 .my-orders:after {
@@ -1415,23 +1438,35 @@ body {
 
 .tools .sorting-type {
 	display: flex;
-	justify-content: space-between;
-	margin-bottom: 10px;
+	margin-bottom: 19px;
 }
 
 .sorting-type > p {
 	margin: 0;
+	margin-right: 140px;
 }
 
 .sorting-type > a {
 	text-decoration: none;
-	color: rgba(0,0,0,0.4);
+	color: rgba(0,0,0,0.3);
 	border-bottom: 1px dashed #ee3643;
+	margin-right: 56px;
+}
+
+.sorting-type > a:not(.type-active):hover {
+	color: #000;
+	border-bottom: 1px solid #ee3643;
+}
+
+.sorting-type > a:not(.type-active):active {
+	color: #ee3643;
+	border: none;
 }
 
 .sorting-type .type-active {
 	color: #ee3643;
 	border: none;
+	margin-right: 70px;
 }
 
 .sorting-controls .arrow {
@@ -1439,6 +1474,11 @@ body {
 	vertical-align: middle;
 	width: 11px;
 	height: 10px;
+	margin-left: 16px;
+}
+
+.sorting-controls .arrow:first-child {
+	margin-left: 0;
 }
 
 .sorting-controls .ascending {
@@ -1466,10 +1506,73 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-bottom: 32px;
 }
 
 .production .good-item {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.pages {
+	display: flex;
+	flex-direction: flex-start;
+}
+
+.pages .btn-page {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	margin-right: 11px;
+	padding: 9px 14px;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.pages .btn-page:not(.active-page):hover {
+	border: 1px solid #bdc6ca;
+}
+
+.pages .btn-page:not(.active-page):active {
+	border: 1px solid #ee3643;
+}
+
+
+.pages .next {
+padding: 9px 30px;
+}
+
+.pages .active-page {
+	color: #fff;
+	background-color: #ee3643;
+	padding: 10px 15px;
+	border: none;
+}
+
+.about-tools {
+	background-color: #f1f5f7;
+	color: #000;
+	padding-top: 64px;
+	padding-bottom: 68px;
+}
+
+.about-tools p {
+	margin-bottom: 0;
+	margin-top: 0;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	
+}
+
+.about-tools h2 {
+	text-transform: uppercase;
+	font-size: 30px;
+	line-height: 30px;
+	margin-top: 0;
+	margin-bottom: 26px
 }
 
 /*ФУТЕР*/
@@ -1482,11 +1585,13 @@ body {
 	position: relative;
 }
 
-.footer-logo {
+.footer-logo,
+.footer-logo-catalog {
 	position: absolute;
 	top: 0;
 	left: 0;
 	text-transform: uppercase;
+	text-decoration: none;
 	color: #fff;
 	line-height: 30px;
 	font-size: 30px;
@@ -1509,35 +1614,33 @@ body {
 	padding-top: 39px;
 }
 
-.footer-menu a:not(.footer-logo) {
+.footer-menu a:not(.footer-logo):not(.footer-logo-catalog) {
 	text-decoration: none;
 	color: #fff;
 	font-size: 18px;
 	line-height: 24px;
 }
 
-.footer-menu a:not(.footer-logo):hover,
+.footer-menu a:not(.footer-logo):not(.footer-logo-catalog):hover,
 .footer-main a:hover {
 	text-decoration: underline;
 }
 
-.footer-menu a:not(.footer-logo):active,
+.footer-menu a:not(.footer-logo):not(.footer-logo-catalog):active,
 .footer-main a:active {
 	opacity: 0.5;
 	text-decoration: none;
 }
 
-/*
-	не на индексе
-.footer-logo:hover {
+.footer-logo-catalog:hover {
 	background-color: #ca2c37;
 	border-color: #9a212a;
 }
 
-.footer-logo:active {
+.footer-logo-catalog:active {
 	background-color: #ba2732;
 	border-color: #8e1e26;	
-}*/ 
+}
 
 .footer-main {
 	display: flex;
