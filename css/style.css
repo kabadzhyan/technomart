@@ -690,7 +690,8 @@ body {
 	justify-content: space-between;
 }
 
-.popular-goods .good-item {
+.popular-goods .good-item,
+.production .good-item {
 	box-sizing: border-box;
 	width: 220px;
 	height: 318px;
@@ -1241,7 +1242,8 @@ body {
 	
 }
 
-.filter > p {
+.filter > p,
+.sorting-type {
 	background-color: #f7f3ec;
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
@@ -1254,7 +1256,6 @@ body {
 
 .tools .sorting {
 	width: 700px;
-	background-color: #f7f3ec;
 }
 
 .tools fieldset {
@@ -1412,8 +1413,64 @@ body {
 	cursor: pointer;
 }
 
+.tools .sorting-type {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
 
+.sorting-type > p {
+	margin: 0;
+}
 
+.sorting-type > a {
+	text-decoration: none;
+	color: rgba(0,0,0,0.4);
+	border-bottom: 1px dashed #ee3643;
+}
+
+.sorting-type .type-active {
+	color: #ee3643;
+	border: none;
+}
+
+.sorting-controls .arrow {
+	display: inline-block;
+	vertical-align: middle;
+	width: 11px;
+	height: 10px;
+}
+
+.sorting-controls .ascending {
+	background: url(../img/up.png) no-repeat;
+}
+
+.sorting-controls .descending {
+	background: url(../img/down.png) no-repeat;
+}
+
+.sorting-controls .descending:hover {
+	background: url(../img/down-hover.png) no-repeat;
+}
+
+.sorting-controls .ascending:active,
+.sorting-controls .sort-active {
+	background: url(../img/up-active.png) no-repeat;
+}
+
+.sorting-controls .descending:active {
+	background: url(../img/down-active.png) no-repeat;
+}
+
+.tools .production {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.production .good-item {
+	margin-bottom: 10px;
+}
 
 /*ФУТЕР*/
 
