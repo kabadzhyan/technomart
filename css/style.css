@@ -413,10 +413,10 @@ body {
 .main-menu ul {
 	display: flex;
 	list-style: none;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0;
 	padding: 0;
-	/*padding: 0 52px;*/
 	background-color: #32425c;
 	border-bottom: 5px solid #293449;
 }
