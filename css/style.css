@@ -1757,12 +1757,81 @@ padding: 9px 30px;
 
 /*MODAL*/
 
-.modal-map {
+@keyframes show-up {
+	0% {
+		opacity: 0;
+	}
+	
+	70% {
+		opacity: 1;
+	}
+}
+
+.modal-add-to-cart {
 	display: none;
-	position: absolute;
-	top: 2335px;
+	position: fixed;
+    top: 5%;
 	left: 50%;
 	transform: translatex(-50%);
+	background-color: white;
+	width: 620px;	
+	z-index: 100;
+	border-top: 7px solid #ee3643;
+	box-shadow: 0px 20px 40px 0px rgba(0, 1, 1, 0.75); 
+}
+
+.item-added p {
+	font-size: 30px;
+	line-height: 30px;
+	color: #000;
+	padding: 35px 80px 38px 131px;
+	text-align: center;
+	position: relative;
+}
+
+.item-added p:before {
+	content: "";
+	position: absolute;
+	width: 66px;
+	height: 66px;
+	background: url(../img/added.png) no-repeat;
+	top: 18px;
+    left: 79px;
+}
+
+.modal-add-to-cart .buttons {
+	background-color: #f1f1f1;
+	padding: 37px 80px;
+}
+
+.buttons a {
+	display: inline-block;
+	width: 220px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: white;
+	color: #000;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+
+.buttons a:first-child {
+	background-color: #ee3643;
+	color: #fff;
+	margin-right: 15px;
+}
+
+.modal-map {
+	display: none;
+	position: fixed;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	background-color: #eae6dd;
 	width: 970px;
 	height: 476px;
@@ -1772,10 +1841,10 @@ padding: 9px 30px;
 
 .modal-write-us {
 	display: none;
-	position: absolute;
-	top: 2515px;
+	position: fixed;
+    top: 50%;
 	left: 50%;
-	transform: translatex(-50%);
+	transform: translate(-50%, -50%);
 	background-image: linear-gradient(to bottom, #fff 311px, #f1f1f1 311px, #f1f1f1 100%);
 	width: 460px;	
 	z-index: 100;
@@ -1787,6 +1856,7 @@ padding: 9px 30px;
 
 .modal-content-show {
 	display: block;
+	animation: show-up 0.5s;
 }
 
 .modal-close-btn {
