@@ -1,20 +1,18 @@
-"use strict";
+
 			var buy = document.querySelectorAll(".buy-btn");
 			var link = document.querySelector(".contact-us-btn");
 			var linkmap = document.querySelector(".map");
-
 			var popup = document.querySelector(".modal-write-us");
 			var popupmap = document.querySelector(".modal-map");
-			var close = document.querySelector(".modal-close-btn");
-			var closemap = document.querySelector(".modal-close-btn");
 			var modal = document.querySelector(".modal-add-to-cart");
-			var closebtn = document.querySelector(".modal-close-btn");
-			var contshop = document.querySelector(".continue-btn");
-		  
-			var form = document.querySelector("form");
+			var closebtn = modal.querySelector(".modal-close-btn");
+			var contshop = modal.querySelector(".continue-btn");
 
-if (link && linkmap && popup && popupmap && closemap) {
-    
+if (link && linkmap && popup && popupmap) {
+			
+			var close = popup.querySelector(".modal-close-btn");
+			var closemap = popupmap.querySelector(".modal-close-btn");
+			
     	link.addEventListener("click", function(event) {
 				event.preventDefault();
 				popup.classList.add("modal-content-show");
@@ -50,7 +48,8 @@ if (link && linkmap && popup && popupmap && closemap) {
 				}
 			  })
 }
-		contshop.addEventListener("click", function(event) {
+
+contshop.addEventListener("click", function(event) {
 				event.preventDefault();
 				modal.classList.remove("modal-content-show");
 			  });
